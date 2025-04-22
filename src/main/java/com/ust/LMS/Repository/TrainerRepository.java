@@ -1,7 +1,7 @@
 package com.ust.LMS.Repository;
 
-import com.ust.LMS.Entity.Batch;
+import com.ust.LMS.Entity.Trainer;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface BatchRepository extends JpaRepository<Batch, Long> {}
+public interface TrainerRepository extends JpaRepository<Trainer, Long> {}
 

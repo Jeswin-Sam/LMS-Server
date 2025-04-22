@@ -1,6 +1,6 @@
 package com.ust.LMS.Controller;
 
-import com.ust.LMS.Entity.Learner;
+import com.ust.LMS.DTO.LearnerDTO;
 import com.ust.LMS.Service.LearnerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,18 +15,18 @@ public class LearnerController {
     private LearnerService learnerService;
 
     @GetMapping
-    public List<Learner> getAll() {
+    public List<LearnerDTO> getAll() {
         return learnerService.getAllLearners();
     }
 
     @GetMapping("/{id}")
-    public Learner getById(@PathVariable Long id) {
+    public LearnerDTO getById(@PathVariable Long id) {
         return learnerService.getLearnerById(id);
     }
 
     @PostMapping
-    public Learner save(@RequestBody Learner learner) {
-        return learnerService.saveLearner(learner);
+    public LearnerDTO save(@RequestBody LearnerDTO dto) {
+        return learnerService.saveLearner(dto);
     }
 
     @DeleteMapping("/{id}")
@@ -34,3 +34,4 @@ public class LearnerController {
         learnerService.deleteLearner(id);
     }
 }
+

@@ -1,6 +1,5 @@
 package com.ust.LMS.Entity.Feedback;
 
-import com.ust.LMS.Entity.LDTeam;
 import com.ust.LMS.Entity.Learner;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -27,7 +26,4 @@ public class LDFeedback {
     @JoinColumn(name = "learner_id")
     private Learner learner;
 
-    @ManyToOne
-    @JoinColumn(name = "ld_id")
-    private LDTeam ldTeam;
 }

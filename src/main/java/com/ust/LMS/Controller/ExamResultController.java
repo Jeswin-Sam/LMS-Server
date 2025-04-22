@@ -1,6 +1,6 @@
 package com.ust.LMS.Controller;
 
-import com.ust.LMS.Entity.ExamResult;
+import com.ust.LMS.DTO.ExamResultDTO;
 import com.ust.LMS.Service.ExamResultService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -9,29 +9,28 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/exam-results")
-public class ExamResultController {
-
+class ExamResultController {
     @Autowired
-    private ExamResultService resultService;
+    private ExamResultService service;
 
     @GetMapping
-    public List<ExamResult> getAll() {
-        return resultService.getAllResults();
+    public List<ExamResultDTO> getAll() {
+        return service.getAll();
     }
 
     @GetMapping("/{id}")
-    public ExamResult getById(@PathVariable Long id) {
-        return resultService.getResultById(id);
+    public ExamResultDTO getById(@PathVariable Long id) {
+        return service.getById(id);
     }
 
     @PostMapping
-    public ExamResult save(@RequestBody ExamResult result) {
-        return resultService.saveResult(result);
+    public ExamResultDTO save(@RequestBody ExamResultDTO dto) {
+        return service.save(dto);
     }
 
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id) {
-        resultService.deleteResult(id);
+        service.delete(id);
     }
 }
 

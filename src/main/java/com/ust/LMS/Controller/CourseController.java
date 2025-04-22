@@ -1,6 +1,6 @@
 package com.ust.LMS.Controller;
 
-import com.ust.LMS.Entity.Course;
+import com.ust.LMS.DTO.CourseDTO;
 import com.ust.LMS.Service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -9,28 +9,27 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/courses")
-public class CourseController {
-
+class CourseController {
     @Autowired
-    private CourseService courseService;
+    private CourseService service;
 
     @GetMapping
-    public List<Course> getAll() {
-        return courseService.getAllCourses();
+    public List<CourseDTO> getAll() {
+        return service.getAll();
     }
 
     @GetMapping("/{id}")
-    public Course getById(@PathVariable Long id) {
-        return courseService.getCourseById(id);
+    public CourseDTO getById(@PathVariable Long id) {
+        return service.getById(id);
     }
 
     @PostMapping
-    public Course save(@RequestBody Course course) {
-        return courseService.saveCourse(course);
+    public CourseDTO save(@RequestBody CourseDTO dto) {
+        return service.save(dto);
     }
 
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id) {
-        courseService.deleteCourse(id);
+        service.delete(id);
     }
 }

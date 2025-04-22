@@ -1,6 +1,6 @@
 package com.ust.LMS.Controller;
 
-import com.ust.LMS.Entity.Feedback.LDFeedback;
+import com.ust.LMS.DTO.LDFeedbackDTO;
 import com.ust.LMS.Service.LDFeedbackService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -9,28 +9,27 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/ld-feedback")
-public class LDFeedbackController {
-
-    @Autowired
-    private LDFeedbackService service;
+class LDFeedbackController {
+    @Autowired private LDFeedbackService service;
 
     @GetMapping
-    public List<LDFeedback> getAll() {
-        return service.getAllFeedback();
+    public List<LDFeedbackDTO> getAll() {
+        return service.getAll();
     }
 
     @GetMapping("/{id}")
-    public LDFeedback getById(@PathVariable Long id) {
-        return service.getFeedbackById(id);
+    public LDFeedbackDTO getById(@PathVariable Long id) {
+        return service.getById(id);
     }
 
     @PostMapping
-    public LDFeedback save(@RequestBody LDFeedback feedback) {
-        return service.saveFeedback(feedback);
+    public LDFeedbackDTO save(@RequestBody LDFeedbackDTO dto) {
+        return service.save(dto);
     }
 
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id) {
-        service.deleteFeedback(id);
+        service.delete(id);
     }
 }
+

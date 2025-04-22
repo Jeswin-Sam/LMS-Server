@@ -1,31 +1,34 @@
 package com.ust.LMS.Service;
 
+import com.ust.LMS.DTO.CourseDTO;
 import com.ust.LMS.Entity.Course;
+import com.ust.LMS.Mapper.CourseMapper;
 import com.ust.LMS.Repository.CourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class CourseService {
+    @Autowired private CourseRepository repo;
+    @Autowired private CourseMapper mapper;
 
-    @Autowired
-    private CourseRepository courseRepository;
-
-    public List<Course> getAllCourses() {
-        return courseRepository.findAll();
+    public List<CourseDTO> getAll() {
+        return repo.findAll().stream().map(mapper::toDTO).collect(Collectors.toList());
     }
 
-    public Course getCourseById(Long id) {
-        return courseRepository.findById(id).orElse(null);
+    public CourseDTO getById(Long id) {
+        return repo.findById(id).map(mapper::toDTO).orElse(null);
     }
 
-    public Course saveCourse(Course course) {
-        return courseRepository.save(course);
+    public CourseDTO save(CourseDTO dto) {
+        Course entity = mapper.toEntity(dto);
+        return mapper.toDTO(repo.save(entity));
     }
 
-    public void deleteCourse(Long id) {
-        courseRepository.deleteById(id);
+    public void delete(Long id) {
+        repo.deleteById(id);
     }
 }

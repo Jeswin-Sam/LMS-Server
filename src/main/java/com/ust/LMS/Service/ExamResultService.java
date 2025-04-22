@@ -1,31 +1,34 @@
 package com.ust.LMS.Service;
 
+import com.ust.LMS.DTO.ExamResultDTO;
 import com.ust.LMS.Entity.ExamResult;
+import com.ust.LMS.Mapper.ExamResultMapper;
 import com.ust.LMS.Repository.ExamResultRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class ExamResultService {
+    @Autowired private ExamResultRepository repo;
+    @Autowired private ExamResultMapper mapper;
 
-    @Autowired
-    private ExamResultRepository examResultRepository;
-
-    public List<ExamResult> getAllResults() {
-        return examResultRepository.findAll();
+    public List<ExamResultDTO> getAll() {
+        return repo.findAll().stream().map(mapper::toDTO).collect(Collectors.toList());
     }
 
-    public ExamResult getResultById(Long id) {
-        return examResultRepository.findById(id).orElse(null);
+    public ExamResultDTO getById(Long id) {
+        return repo.findById(id).map(mapper::toDTO).orElse(null);
     }
 
-    public ExamResult saveResult(ExamResult result) {
-        return examResultRepository.save(result);
+    public ExamResultDTO save(ExamResultDTO dto) {
+        ExamResult entity = mapper.toEntity(dto);
+        return mapper.toDTO(repo.save(entity));
     }
 
-    public void deleteResult(Long id) {
-        examResultRepository.deleteById(id);
+    public void delete(Long id) {
+        repo.deleteById(id);
     }
 }

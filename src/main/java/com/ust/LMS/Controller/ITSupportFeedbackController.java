@@ -1,6 +1,6 @@
 package com.ust.LMS.Controller;
 
-import com.ust.LMS.Entity.Feedback.ITSupportFeedback;
+import com.ust.LMS.DTO.ITSupportFeedbackDTO;
 import com.ust.LMS.Service.ITSupportFeedbackService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -9,29 +9,28 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/it-support-feedback")
-public class ITSupportFeedbackController {
-
+class ITSupportFeedbackController {
     @Autowired
     private ITSupportFeedbackService service;
 
     @GetMapping
-    public List<ITSupportFeedback> getAll() {
-        return service.getAllFeedback();
+    public List<ITSupportFeedbackDTO> getAll() {
+        return service.getAll();
     }
 
     @GetMapping("/{id}")
-    public ITSupportFeedback getById(@PathVariable Long id) {
-        return service.getFeedbackById(id);
+    public ITSupportFeedbackDTO getById(@PathVariable Long id) {
+        return service.getById(id);
     }
 
     @PostMapping
-    public ITSupportFeedback save(@RequestBody ITSupportFeedback feedback) {
-        return service.saveFeedback(feedback);
+    public ITSupportFeedbackDTO save(@RequestBody ITSupportFeedbackDTO dto) {
+        return service.save(dto);
     }
 
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id) {
-        service.deleteFeedback(id);
+        service.delete(id);
     }
 }
 

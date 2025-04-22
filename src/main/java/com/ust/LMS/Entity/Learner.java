@@ -18,7 +18,7 @@ import java.util.List;
 public class Learner {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long participantId;
+    private Long learnerId;
 
     private String name;
     private String email;
@@ -27,10 +27,6 @@ public class Learner {
     @ManyToOne
     @JoinColumn(name = "batch_id")
     private Batch batch;
-
-    @ManyToOne
-    @JoinColumn(name = "ld_id")
-    private LDTeam ldTeam;
 
     @OneToMany(mappedBy = "learner")
     private List<TrainerFeedback> trainerFeedbacks;

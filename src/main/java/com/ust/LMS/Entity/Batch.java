@@ -24,9 +24,5 @@ public class Batch {
     @JoinColumn(name = "trainer_id")
     private Trainer trainer;
 
-    @ManyToOne
-    @JoinColumn(name = "hr_id")
-    private HRTeam hrTeam;
-
 }
 

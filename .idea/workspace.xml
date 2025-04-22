@@ -7,19 +7,68 @@
     <list default="true" id="58bc64b7-9157-495a-b3a1-cb7665a50382" name="Changes" comment="initial commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Controller/BatchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Controller/BatchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Controller/CourseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Controller/ExamController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Controller/ExamController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Controller/ExamResultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Controller/ExamResultController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Controller/ITSupportFeedbackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Controller/ITSupportFeedbackController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Controller/LDFeedbackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Controller/LDFeedbackController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Controller/LearnerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Controller/LearnerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Controller/TrainerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Controller/TrainerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Controller/TrainerFeedbackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Controller/TrainerFeedbackController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/DTO/BatchDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/DTO/BatchDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/DTO/CourseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/DTO/CourseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/DTO/ExamDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/DTO/ExamDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/DTO/ExamResultDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/DTO/ExamResultDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/DTO/ITSupportFeedbackDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/DTO/ITSupportFeedbackDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/DTO/LDFeedbackDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/DTO/LDFeedbackDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/DTO/LearnerDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/DTO/LearnerDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/DTO/TrainerDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/DTO/TrainerDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/DTO/TrainerFeedbackDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/DTO/TrainerFeedbackDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/Batch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/Batch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/Exam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/Exam.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/ExamResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/ExamResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/Feedback/ITSupportFeedback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/Feedback/ITSupportFeedback.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/Feedback/LDFeedback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/Feedback/LDFeedback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/Feedback/TrainerFeedback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/Feedback/TrainerFeedback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/HRTeam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/HRTeam.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/ITSupportTeam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/ITSupportTeam.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/LDTeam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/LDTeam.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/Learner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/Learner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/Trainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/Trainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Mapper/BatchMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Mapper/BatchMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Mapper/CourseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Mapper/CourseMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Mapper/ExamMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Mapper/ExamMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Mapper/ExamResultMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Mapper/ExamResultMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Mapper/ITSupportFeedbackMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Mapper/ITSupportFeedbackMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Mapper/LDFeedbackMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Mapper/LDFeedbackMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Mapper/LearnerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Mapper/LearnerMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Mapper/TrainerFeedbackMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Mapper/TrainerFeedbackMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Mapper/TrainerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Mapper/TrainerMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Repository/BatchRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Repository/BatchRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Repository/TrainerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Repository/TrainerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Service/BatchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Service/BatchService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Service/CourseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Service/ExamResultService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Service/ExamResultService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Service/ExamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Service/ExamService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Service/ITSupportFeedbackService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Service/ITSupportFeedbackService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Service/LDFeedbackService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Service/LDFeedbackService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Service/LearnerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Service/LearnerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Service/TrainerFeedbackService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Service/TrainerFeedbackService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Service/TrainerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Service/TrainerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ust/LMS/Controller/CourseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ust/LMS/Controller/CourseController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ust/LMS/Controller/ExamController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ust/LMS/Controller/ExamController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ust/LMS/Controller/ExamResultController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ust/LMS/Controller/ExamResultController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ust/LMS/Controller/ITSupportFeedbackController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ust/LMS/Controller/ITSupportFeedbackController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ust/LMS/Controller/LDFeedbackController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ust/LMS/Controller/LDFeedbackController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ust/LMS/Controller/LearnerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ust/LMS/Controller/LearnerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ust/LMS/Controller/TrainerFeedbackController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ust/LMS/Controller/TrainerFeedbackController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ust/LMS/Entity/Batch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ust/LMS/Entity/Batch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ust/LMS/Entity/Feedback/LDFeedback.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ust/LMS/Entity/Feedback/LDFeedback.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ust/LMS/Entity/HRTeam.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ust/LMS/Entity/LDTeam.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ust/LMS/Entity/Learner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ust/LMS/Entity/Learner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ust/LMS/Entity/Trainer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ust/LMS/Entity/Trainer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ust/LMS/Service/CourseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ust/LMS/Service/CourseService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ust/LMS/Service/ExamResultService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ust/LMS/Service/ExamResultService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ust/LMS/Service/ExamService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ust/LMS/Service/ExamService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ust/LMS/Service/ITSupportFeedbackService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ust/LMS/Service/ITSupportFeedbackService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ust/LMS/Service/LDFeedbackService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ust/LMS/Service/LDFeedbackService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ust/LMS/Service/LearnerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ust/LMS/Service/LearnerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ust/LMS/Service/TrainerFeedbackService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ust/LMS/Service/TrainerFeedbackService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,8 +93,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -79,25 +128,33 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2vX5I5jSQ9DIj0uWCjypslsO9oy" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.LmsApplication.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/294383/Desktop/LMS",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "MavenSettings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.LmsApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/294383/Desktop/LMS&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.import&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ust.LMS.Repository" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="LmsApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ust.LMS.LmsApplication" />

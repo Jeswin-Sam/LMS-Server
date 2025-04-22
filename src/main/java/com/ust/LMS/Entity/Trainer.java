@@ -24,8 +24,7 @@ public class Trainer {
     @OneToMany(mappedBy = "trainer")
     private List<Batch> batches;
 
-    @ManyToOne
-    @JoinColumn(name = "ld_id")
-    private LDTeam ldTeam;
+    @Column(nullable = false)
+    private Boolean isAvailable = true;
 
 }

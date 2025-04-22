@@ -1,31 +1,34 @@
 package com.ust.LMS.Service;
 
+import com.ust.LMS.DTO.ITSupportFeedbackDTO;
 import com.ust.LMS.Entity.Feedback.ITSupportFeedback;
+import com.ust.LMS.Mapper.ITSupportFeedbackMapper;
 import com.ust.LMS.Repository.ITSupportFeedbackRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class ITSupportFeedbackService {
+    @Autowired private ITSupportFeedbackRepository repo;
+    @Autowired private ITSupportFeedbackMapper mapper;
 
-    @Autowired
-    private ITSupportFeedbackRepository itSupportFeedbackRepository;
-
-    public List<ITSupportFeedback> getAllFeedback() {
-        return itSupportFeedbackRepository.findAll();
+    public List<ITSupportFeedbackDTO> getAll() {
+        return repo.findAll().stream().map(mapper::toDTO).collect(Collectors.toList());
     }
 
-    public ITSupportFeedback getFeedbackById(Long id) {
-        return itSupportFeedbackRepository.findById(id).orElse(null);
+    public ITSupportFeedbackDTO getById(Long id) {
+        return repo.findById(id).map(mapper::toDTO).orElse(null);
     }
 
-    public ITSupportFeedback saveFeedback(ITSupportFeedback feedback) {
-        return itSupportFeedbackRepository.save(feedback);
+    public ITSupportFeedbackDTO save(ITSupportFeedbackDTO dto) {
+        ITSupportFeedback entity = mapper.toEntity(dto);
+        return mapper.toDTO(repo.save(entity));
     }
 
-    public void deleteFeedback(Long id) {
-        itSupportFeedbackRepository.deleteById(id);
+    public void delete(Long id) {
+        repo.deleteById(id);
     }
 }
