@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58bc64b7-9157-495a-b3a1-cb7665a50382" name="Changes" comment="initial commit" />
+    <list default="true" id="58bc64b7-9157-495a-b3a1-cb7665a50382" name="Changes" comment="initial commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/Batch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/Batch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/Exam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/Exam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/ExamResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/ExamResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/Feedback/ITSupportFeedback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/Feedback/ITSupportFeedback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/Feedback/LDFeedback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/Feedback/LDFeedback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/Feedback/TrainerFeedback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/Feedback/TrainerFeedback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/HRTeam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/HRTeam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/ITSupportTeam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/ITSupportTeam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/LDTeam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/LDTeam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/Learner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/Learner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/Trainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ust/LMS/Entity/Trainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,18 +52,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Jeswin-Sam"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Jeswin-Sam&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Jeswin-Sam/LMS",
-    "accountId": "ed301286-b418-43b1-a67b-72c0dfc67025"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Jeswin-Sam/LMS&quot;,
+    &quot;accountId&quot;: &quot;ed301286-b418-43b1-a67b-72c0dfc67025&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -63,7 +79,6 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2vX5I5jSQ9DIj0uWCjypslsO9oy" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -72,7 +87,9 @@
   "keyToString": {
     "Application.LmsApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/294383/Desktop/LMS",
     "project.structure.last.edited": "SDKs",

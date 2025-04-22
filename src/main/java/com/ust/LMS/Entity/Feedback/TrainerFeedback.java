@@ -14,10 +14,13 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "trainer_feedback")
 public class TrainerFeedback {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long feedbackId;
+
     private String message;
     private Date submittedDate;
 

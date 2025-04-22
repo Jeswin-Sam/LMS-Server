@@ -9,10 +9,12 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "exam_result")
 public class ExamResult {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long resultId;
+
     private Double score;
 
     @ManyToOne

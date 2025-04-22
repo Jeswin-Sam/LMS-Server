@@ -13,10 +13,12 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "it_support_feedback")
 public class ITSupportFeedback {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long feedbackId;
+
     private String message;
     private Date submittedDate;
 

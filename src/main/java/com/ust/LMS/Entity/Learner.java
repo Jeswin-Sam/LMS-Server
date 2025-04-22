@@ -7,7 +7,6 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.engine.jdbc.batch.spi.Batch;
 
 import java.util.List;
 
@@ -15,10 +14,12 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "learner")
 public class Learner {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long participantId;
+
     private String name;
     private String email;
     private String designation;
