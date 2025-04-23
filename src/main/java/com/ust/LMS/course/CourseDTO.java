@@ -12,4 +12,5 @@ public class CourseDTO {
     private String title;
     private String description;
     private String topic;
+    private String playlistUrl;
 }

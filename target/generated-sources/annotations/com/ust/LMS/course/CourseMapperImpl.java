@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-04-23T10:23:29+0530",
+    date = "2025-04-23T12:07:53+0530",
     comments = "version: 1.5.5.Final, compiler: javac, environment: Java 21.0.6 (Microsoft)"
 )
 @Component
@@ -23,6 +23,7 @@ public class CourseMapperImpl implements CourseMapper {
         courseDTO.setTitle( course.getTitle() );
         courseDTO.setDescription( course.getDescription() );
         courseDTO.setTopic( course.getTopic() );
+        courseDTO.setPlaylistUrl( course.getPlaylistUrl() );
 
         return courseDTO;
     }
@@ -39,6 +40,7 @@ public class CourseMapperImpl implements CourseMapper {
         course.setTitle( dto.getTitle() );
         course.setDescription( dto.getDescription() );
         course.setTopic( dto.getTopic() );
+        course.setPlaylistUrl( dto.getPlaylistUrl() );
 
         return course;
     }
