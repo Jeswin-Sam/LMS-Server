@@ -1,0 +1,73 @@
+package com.ust.LMS.batch;
+
+import com.ust.LMS.course.Course;
+import com.ust.LMS.trainer.Trainer;
+import com.ust.LMS.course.CourseRepository;
+import com.ust.LMS.learner.LearnerRepository;
+import com.ust.LMS.trainer.TrainerRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+@Service
+public class BatchService {
+
+    @Autowired
+    private BatchRepository batchRepository;
+
+    @Autowired
+    private TrainerRepository trainerRepository;
+
+    @Autowired
+    private LearnerRepository learnerRepository;
+
+    @Autowired
+    private CourseRepository courseRepository;
+
+    @Autowired
+    private BatchMapper batchMapper;
+
+    public List<BatchDTO> getAllBatches() {
+        return batchRepository.findAll().stream().map(batchMapper::toDTO).collect(Collectors.toList());
+    }
+
+    public BatchDTO getBatchById(Long id) {
+        return batchRepository.findById(id).map(batchMapper::toDTO).orElse(null);
+    }
+
+    public BatchDTO saveBatch(BatchDTO dto) {
+        Batch batch = batchMapper.toEntity(dto);
+
+        if (dto.getTrainerId() != null) {
+            Trainer trainer = trainerRepository.findById(dto.getTrainerId()).orElse(null);
+            if (trainer != null) {
+                batch.setTrainer(trainer);
+                trainer.setIsAvailable(false);
+                trainerRepository.save(trainer);
+            }
+        }
+
+        if (dto.getCourseIds() != null) {
+            List<Course> courses = courseRepository.findAllById(dto.getCourseIds());
+            batch.setCourses(courses);
+        }
+
+        return batchMapper.toDTO(batchRepository.save(batch));
+    }
+
+    public void deleteBatch(Long id) {
+        Optional<Batch> optionalBatch = batchRepository.findById(id);
+        if (optionalBatch.isPresent()) {
+            Batch batch = optionalBatch.get();
+            Trainer trainer = batch.getTrainer();
+            if (trainer != null) {
+                trainer.setIsAvailable(true);
+                trainerRepository.save(trainer);
+            }
+            batchRepository.deleteById(id);
+        }
+    }
+}
