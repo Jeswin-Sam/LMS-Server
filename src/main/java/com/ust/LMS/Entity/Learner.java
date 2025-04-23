@@ -1,8 +1,5 @@
 package com.ust.LMS.Entity;
 
-import com.ust.LMS.Entity.Feedback.ITSupportFeedback;
-import com.ust.LMS.Entity.Feedback.LDFeedback;
-import com.ust.LMS.Entity.Feedback.TrainerFeedback;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,7 +1,7 @@
 package com.ust.LMS.Service;
 
 import com.ust.LMS.DTO.TrainerFeedbackDTO;
-import com.ust.LMS.Entity.Feedback.TrainerFeedback;
+import com.ust.LMS.Entity.TrainerFeedback;
 import com.ust.LMS.Mapper.TrainerFeedbackMapper;
 import com.ust.LMS.Repository.TrainerFeedbackRepository;
 import org.springframework.beans.factory.annotation.Autowired;

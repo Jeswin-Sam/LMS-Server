@@ -1,7 +1,7 @@
 package com.ust.LMS.Mapper;
 
 import com.ust.LMS.DTO.ITSupportFeedbackDTO;
-import com.ust.LMS.Entity.Feedback.ITSupportFeedback;
+import com.ust.LMS.Entity.ITSupportFeedback;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
