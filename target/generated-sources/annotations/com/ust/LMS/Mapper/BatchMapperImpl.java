@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-04-22T16:58:23+0530",
+    date = "2025-04-23T09:53:21+0530",
     comments = "version: 1.5.5.Final, compiler: javac, environment: Java 21.0.6 (Microsoft)"
 )
 @Component
@@ -23,10 +23,14 @@ public class BatchMapperImpl implements BatchMapper {
         BatchDTO batchDTO = new BatchDTO();
 
         batchDTO.setTrainerId( batchTrainerTrainerId( batch ) );
+        batchDTO.setTrainerName( batchTrainerName( batch ) );
         batchDTO.setBatchId( batch.getBatchId() );
         batchDTO.setBatchName( batch.getBatchName() );
         batchDTO.setStartDate( batch.getStartDate() );
         batchDTO.setEndDate( batch.getEndDate() );
+
+        batchDTO.setCourseNames( batch.getCourses() != null ? batch.getCourses().stream().map(c -> c.getTitle()).collect(java.util.stream.Collectors.toList()) : null );
+        batchDTO.setCourseIds( batch.getCourses() != null ? batch.getCourses().stream().map(c -> c.getCourseId()).collect(java.util.stream.Collectors.toList()) : null );
 
         return batchDTO;
     }
@@ -60,5 +64,20 @@ public class BatchMapperImpl implements BatchMapper {
             return null;
         }
         return trainerId;
+    }
+
+    private String batchTrainerName(Batch batch) {
+        if ( batch == null ) {
+            return null;
+        }
+        Trainer trainer = batch.getTrainer();
+        if ( trainer == null ) {
+            return null;
+        }
+        String name = trainer.getName();
+        if ( name == null ) {
+            return null;
+        }
+        return name;
     }
 }

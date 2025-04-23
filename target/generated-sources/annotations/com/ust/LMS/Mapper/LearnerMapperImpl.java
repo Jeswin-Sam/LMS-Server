@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-04-22T16:58:23+0530",
+    date = "2025-04-23T09:53:21+0530",
     comments = "version: 1.5.5.Final, compiler: javac, environment: Java 21.0.6 (Microsoft)"
 )
 @Component
@@ -21,6 +21,7 @@ public class LearnerMapperImpl implements LearnerMapper {
 
         Learner learner = new Learner();
 
+        learner.setLearnerId( dto.getLearnerId() );
         learner.setName( dto.getName() );
         learner.setEmail( dto.getEmail() );
         learner.setDesignation( dto.getDesignation() );
@@ -36,6 +37,7 @@ public class LearnerMapperImpl implements LearnerMapper {
 
         LearnerDTO learnerDTO = new LearnerDTO();
 
+        learnerDTO.setLearnerId( learner.getLearnerId() );
         learnerDTO.setName( learner.getName() );
         learnerDTO.setEmail( learner.getEmail() );
         learnerDTO.setDesignation( learner.getDesignation() );

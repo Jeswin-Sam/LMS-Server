@@ -2,6 +2,7 @@ package com.ust.LMS.Service;
 
 import com.ust.LMS.DTO.BatchDTO;
 import com.ust.LMS.Entity.Batch;
+import com.ust.LMS.Entity.Course;
 import com.ust.LMS.Entity.Trainer;
 import com.ust.LMS.Mapper.BatchMapper;
 import com.ust.LMS.Repository.BatchRepository;
@@ -53,6 +54,11 @@ public class BatchService {
             }
         }
 
+        if (dto.getCourseIds() != null) {
+            List<Course> courses = courseRepository.findAllById(dto.getCourseIds());
+            batch.setCourses(courses);
+        }
+
         return batchMapper.toDTO(batchRepository.save(batch));
     }
 
@@ -69,4 +75,3 @@ public class BatchService {
         }
     }
 }
-

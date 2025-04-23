@@ -1,15 +1,17 @@
 package com.ust.LMS.Entity;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
+import java.util.List;
 
-@Setter
-@Getter
 @Entity
-@Table(name = "batch")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Batch {
 
     @Id
@@ -17,12 +19,24 @@ public class Batch {
     private Long batchId;
 
     private String batchName;
+
+    @Temporal(TemporalType.DATE)
     private Date startDate;
+
+    @Temporal(TemporalType.DATE)
     private Date endDate;
 
     @ManyToOne
     @JoinColumn(name = "trainer_id")
     private Trainer trainer;
 
+    @ManyToMany
+    @JoinTable(
+            name = "batch_courses",
+            joinColumns = @JoinColumn(name = "batch_id"),
+            inverseJoinColumns = @JoinColumn(name = "course_id")
+    )
+    private List<Course> courses;
 }
+
 
