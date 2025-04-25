@@ -1,0 +1,33 @@
+# === Java & Maven ===
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.log
+*.tmp
+
+# Maven specific
+dependency-reduced-pom.xml
+buildNumber.properties
+.releaseBackup
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+
+# === IntelliJ IDEA ===
+.idea/
+*.iml
+*.iws
+out/
+
+# === VS Code ===
+.vscode/
+
+# === OS-specific ===
+.DS_Store
+Thumbs.db
+
+# === Logs ===
+*.log
