@@ -1,12 +1,14 @@
 package com.ust.LMS.learner;
 
 import com.ust.LMS.batch.Batch;
-import com.ust.LMS.course.Course;
 import com.ust.LMS.batch.BatchRepository;
+import com.ust.LMS.course.Course;
+import com.ust.LMS.course.CourseDTO;
 import com.ust.LMS.course.CourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -45,6 +47,23 @@ public class LearnerService {
 
         return learnerMapper.toDTO(learnerRepository.save(learner));
     }
+
+    public List<CourseDTO> getCoursesForLearner(String email) {
+        Learner learner = learnerRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("Learner not found"));
+
+        List<CourseDTO> courseDTOs = new ArrayList<>();
+
+        for (Course course : learner.getBatch().getCourses()) {
+            CourseDTO dto = new CourseDTO();
+            dto.setTitle(course.getTitle());
+            dto.setDescription(course.getDescription());
+            courseDTOs.add(dto);
+        }
+
+        return courseDTOs;
+    }
+
 
     public void deleteLearner(Long id) {
         learnerRepository.deleteById(id);
