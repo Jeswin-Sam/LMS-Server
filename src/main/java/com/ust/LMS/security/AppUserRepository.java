@@ -1,4 +1,4 @@
-package com.ust.LMS.JWT;
+package com.ust.LMS.security;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

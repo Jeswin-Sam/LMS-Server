@@ -1,4 +1,4 @@
-package com.ust.LMS.JWT;
+package com.ust.LMS.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
