@@ -1,11 +1,8 @@
 package com.ust.LMS.learner;
 
-import com.ust.LMS.exam.ExamResult;
-import com.ust.LMS.feedback.ITSupportFeedback;
-import com.ust.LMS.feedback.LDFeedback;
-import com.ust.LMS.feedback.TrainerFeedback;
 import com.ust.LMS.batch.Batch;
 import com.ust.LMS.course.Course;
+import com.ust.LMS.exam.ExamResult;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -30,15 +27,6 @@ public class Learner {
     @ManyToOne
     @JoinColumn(name = "batch_id")
     private Batch batch;
-
-    @OneToMany(mappedBy = "learner")
-    private List<TrainerFeedback> trainerFeedbacks;
-
-    @OneToMany(mappedBy = "learner")
-    private List<LDFeedback> ldFeedbacks;
-
-    @OneToMany(mappedBy = "learner")
-    private List<ITSupportFeedback> itSupportFeedbacks;
 
     @OneToMany(mappedBy = "learner")
     private List<ExamResult> examResults;

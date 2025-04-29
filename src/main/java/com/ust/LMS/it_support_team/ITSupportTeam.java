@@ -1,11 +1,8 @@
 package com.ust.LMS.it_support_team;
 
-import com.ust.LMS.feedback.ITSupportFeedback;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-
-import java.util.List;
 
 @Setter
 @Getter
@@ -19,9 +16,4 @@ public class ITSupportTeam {
 
     private String name;
     private String email;
-    private String expertiseArea;
-
-    @OneToMany(mappedBy = "supportTeam")
-    private List<ITSupportFeedback> feedbacks;
-
 }
