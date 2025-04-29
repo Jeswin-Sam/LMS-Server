@@ -20,17 +20,10 @@ import java.util.Random;
 @RequestMapping("/auth")
 public class AuthController {
 
-    @Autowired
-    private AppUserRepository userRepo;
-
-    @Autowired
-    private JwtUtil jwtUtil;
-
-    @Autowired
-    private JavaMailSender mailSender;
-
-    @Autowired
-    private PasswordEncoder passwordEncoder;
+    @Autowired private AppUserRepository userRepo;
+    @Autowired private JwtUtil jwtUtil;
+    @Autowired private JavaMailSender mailSender;
+    @Autowired private PasswordEncoder passwordEncoder;
 
     private Map<String, OtpDetails> otpStorage = new HashMap<>();
     private Map<String, Integer> invalidAttempts = new HashMap<>();
@@ -38,7 +31,8 @@ public class AuthController {
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody LoginRequest request) {
         AppUser user = userRepo.findByEmail(request.getEmail());
-        if (user != null && user.getPassword().equals(request.getPassword())) {
+
+        if (user != null && passwordEncoder.matches(request.getPassword(), user.getPassword())) {
             String token = jwtUtil.generateToken(user.getEmail(), user.getRole());
             LoginResponse response = new LoginResponse(token, user.getEmail(), user.getRole());
             return ResponseEntity.ok(response);
