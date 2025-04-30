@@ -14,16 +14,11 @@ import java.util.stream.Collectors;
 
 @Service
 public class TrainerService {
-    @Autowired
-    private TrainerRepository repo;
-    @Autowired
-    private TrainerMapper mapper;
-    @Autowired
-    private AppUserRepository appUserRepository;
-    @Autowired
-    private PasswordEncoder passwordEncoder;
-    @Autowired
-    private JavaMailSender mailSender;
+    @Autowired private TrainerRepository repo;
+    @Autowired private TrainerMapper mapper;
+    @Autowired private AppUserRepository appUserRepository;
+    @Autowired private PasswordEncoder passwordEncoder;
+    @Autowired private JavaMailSender mailSender;
 
     public List<TrainerDTO> getAll() {
         return repo.findAll().stream().map(mapper::toDTO).collect(Collectors.toList());
@@ -34,9 +29,7 @@ public class TrainerService {
     }
 
     public TrainerDTO save(TrainerDTO dto) {
-        Trainer trainer = new Trainer();
-        trainer.setName(dto.getName());
-        trainer.setEmail(dto.getEmail());
+        Trainer trainer = mapper.toEntity(dto);
         repo.save(trainer);
 
         // Generate random password
@@ -60,7 +53,7 @@ public class TrainerService {
         message.setTo(email);
         message.setSubject("Welcome to LMS - Login Details");
         message.setText("Dear " + name + ",\n\n"
-                + "Your LMS account has been created.\n"
+                + "Your LMS Trainer account has been created.\n"
                 + "Here are your login credentials:\n\n"
                 + "Email: " + email + "\n"
                 + "Password: " + password + "\n\n"

@@ -74,7 +74,7 @@ public class LearnerService {
         message.setTo(email);
         message.setSubject("Welcome to LMS - Login Details");
         message.setText("Dear " + name + ",\n\n"
-                + "Your LMS account has been created.\n"
+                + "Your LMS Learner account has been created.\n"
                 + "Here are your login credentials:\n\n"
                 + "Email: " + email + "\n"
                 + "Password: " + password + "\n\n"

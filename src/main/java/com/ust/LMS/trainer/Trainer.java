@@ -5,9 +5,6 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-
-import java.util.List;
-
 @Setter
 @Getter
 @Entity
@@ -22,10 +19,10 @@ public class Trainer {
     private String email;
     private String specialization;
 
-    @OneToMany(mappedBy = "trainer")
-    private List<Batch> batches;
+    @OneToOne
+    private Batch batch;
 
     @Column(nullable = false)
-    private Boolean isAvailable = true;
+    private Boolean availability = true;
 
 }

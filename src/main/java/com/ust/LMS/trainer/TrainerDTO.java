@@ -11,6 +11,7 @@ public class TrainerDTO {
     private Long trainerId;
     private String name;
     private String email;
-    private Boolean isAvailable;
+    private String specialization;
+    private Boolean availability = true;
     private Long batchId;
 }

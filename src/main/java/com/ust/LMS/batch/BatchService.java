@@ -45,7 +45,7 @@ public class BatchService {
             Trainer trainer = trainerRepository.findById(dto.getTrainerId()).orElse(null);
             if (trainer != null) {
                 batch.setTrainer(trainer);
-                trainer.setIsAvailable(false);
+                trainer.setAvailability(false);
                 trainerRepository.save(trainer);
             }
         }
@@ -64,7 +64,7 @@ public class BatchService {
             Batch batch = optionalBatch.get();
             Trainer trainer = batch.getTrainer();
             if (trainer != null) {
-                trainer.setIsAvailable(true);
+                trainer.setAvailability(true);
                 trainerRepository.save(trainer);
             }
             batchRepository.deleteById(id);
