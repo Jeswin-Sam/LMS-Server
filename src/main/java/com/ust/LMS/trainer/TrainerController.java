@@ -16,6 +16,11 @@ public class TrainerController {
         return service.getAll();
     }
 
+    @GetMapping("/available")
+    public List<TrainerDTO> getAvailableTrainers() {
+        return service.getAvailableTrainers();
+    }
+
     @GetMapping("/{id}")
     public TrainerDTO getById(@PathVariable Long id) {
         return service.getById(id);

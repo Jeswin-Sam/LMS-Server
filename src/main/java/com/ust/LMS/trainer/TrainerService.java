@@ -24,6 +24,13 @@ public class TrainerService {
         return repo.findAll().stream().map(mapper::toDTO).collect(Collectors.toList());
     }
 
+    public List<TrainerDTO> getAvailableTrainers() {
+        return repo.findByAvailabilityTrue()
+                .stream()
+                .map(mapper::toDTO)
+                .collect(Collectors.toList());
+    }
+
     public TrainerDTO getById(Long id) {
         return repo.findById(id).map(mapper::toDTO).orElse(null);
     }
