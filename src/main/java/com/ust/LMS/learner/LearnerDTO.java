@@ -15,4 +15,5 @@ public class LearnerDTO {
     private String designation;
     private Long batchId;
     private List<Long> courseIds;
+    private List<String> courseNames;
 }

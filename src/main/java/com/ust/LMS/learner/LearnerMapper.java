@@ -15,7 +15,15 @@ public interface LearnerMapper {
 
     default List<Long> mapCourseIds(Learner learner) {
         if (learner.getCourses() == null) return null;
-        return learner.getCourses().stream().map(Course::getCourseId).collect(Collectors.toList());
+        return learner.getCourses().stream()
+                .map(Course::getCourseId)
+                .collect(Collectors.toList());
+    }
+
+    default List<String> mapCourseNames(Learner learner) {
+        if (learner.getCourses() == null) return null;
+        return learner.getCourses().stream()
+                .map(Course::getTitle) 
+                .collect(Collectors.toList());
     }
 }
-
