@@ -31,10 +31,9 @@ public class AuthController {
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody LoginRequest request) {
         AppUser user = userRepo.findByEmail(request.getEmail());
-
         if (user != null && passwordEncoder.matches(request.getPassword(), user.getPassword())) {
             String token = jwtUtil.generateToken(user.getEmail(), user.getRole());
-            LoginResponse response = new LoginResponse(token, user.getEmail(), user.getRole());
+            LoginResponse response = new LoginResponse(token, user.getEmail(), user.getRole(), user.getName()); // ✅ added name
             return ResponseEntity.ok(response);
         }
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid credentials");

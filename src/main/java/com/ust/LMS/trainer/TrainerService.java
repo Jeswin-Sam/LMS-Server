@@ -15,44 +15,46 @@ import java.util.stream.Collectors;
 @Service
 public class TrainerService {
     @Autowired private TrainerRepository repo;
-    @Autowired private TrainerMapper mapper;
+    @Autowired private TrainerMapper trainerMapper;
     @Autowired private AppUserRepository appUserRepository;
     @Autowired private PasswordEncoder passwordEncoder;
     @Autowired private JavaMailSender mailSender;
 
     public List<TrainerDTO> getAll() {
-        return repo.findAll().stream().map(mapper::toDTO).collect(Collectors.toList());
+        return repo.findAll().stream().map(trainerMapper::toDTO).collect(Collectors.toList());
     }
 
     public List<TrainerDTO> getAvailableTrainers() {
         return repo.findByAvailabilityTrue()
                 .stream()
-                .map(mapper::toDTO)
+                .map(trainerMapper::toDTO)
                 .collect(Collectors.toList());
     }
 
     public TrainerDTO getById(Long id) {
-        return repo.findById(id).map(mapper::toDTO).orElse(null);
+        return repo.findById(id).map(trainerMapper::toDTO).orElse(null);
     }
 
     public TrainerDTO save(TrainerDTO dto) {
-        Trainer trainer = mapper.toEntity(dto);
+        Trainer trainer = trainerMapper.toEntity(dto);
         repo.save(trainer);
 
         // Generate random password
         String randomPassword = generateRandomPassword();
 
         // Create AppUser
-        AppUser user = new AppUser();
-        user.setEmail(dto.getEmail());
-        user.setPassword(passwordEncoder.encode(randomPassword));
-        user.setRole("TRAINER");
+        AppUser user = new AppUser(
+                dto.getEmail(),
+                passwordEncoder.encode(randomPassword),
+                "TRAINER",
+                dto.getName());
+
         appUserRepository.save(user);
 
         // Send welcome email
         sendWelcomeEmail(dto.getEmail(), dto.getName(), randomPassword);
 
-        return mapper.toDTO(repo.save(trainer));
+        return trainerMapper.toDTO(repo.save(trainer));
     }
 
     private void sendWelcomeEmail(String email, String name, String password) {

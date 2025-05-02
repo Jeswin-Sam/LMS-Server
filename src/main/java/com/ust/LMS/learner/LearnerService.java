@@ -48,19 +48,19 @@ public class LearnerService {
     }
 
     public LearnerDTO saveLearner(LearnerDTO dto) {
-        Learner learner = new Learner();
-        learner.setName(dto.getName());
-        learner.setEmail(dto.getEmail());
+        Learner learner = learnerMapper.toEntity(dto);
         learnerRepository.save(learner);
 
         // Generate random password
         String randomPassword = generateRandomPassword();
 
         // Create AppUser
-        AppUser user = new AppUser();
-        user.setEmail(dto.getEmail());
-        user.setPassword(passwordEncoder.encode(randomPassword));
-        user.setRole("LEARNER");
+        AppUser user = new AppUser(
+                dto.getEmail(),
+                passwordEncoder.encode(randomPassword),
+                "LEARNER",
+                dto.getName());
+
         appUserRepository.save(user);
 
         // Send welcome email
