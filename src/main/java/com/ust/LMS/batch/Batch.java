@@ -1,6 +1,7 @@
 package com.ust.LMS.batch;
 
 import com.ust.LMS.course.Course;
+import com.ust.LMS.learner.Learner;
 import com.ust.LMS.trainer.Trainer;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -39,6 +40,10 @@ public class Batch {
             inverseJoinColumns = @JoinColumn(name = "course_id")
     )
     private List<Course> courses;
+
+    @OneToMany(mappedBy = "batch", cascade = CascadeType.ALL)
+    private List<Learner> learners;
+
 }
 
 

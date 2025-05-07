@@ -27,4 +27,7 @@ public class BatchDTO {
 
     private List<Long> courseIds;
     private List<String> courseNames;
+
+    private List<Long> learnerIds;
+    private List<String> learnerNames;
 }
